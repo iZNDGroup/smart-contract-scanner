@@ -12,7 +12,7 @@ def scan_for_smart_contracts(wallet_address):
         list: A list of smart contract addresses that have been authorized to access the specified wallet.
     """
 
-    web3_provider = web3.Web3(Web3.HTTPProvider("https://polygon-rpc.com"))
+    web3_provider = web3.Web3(web3.HTTPProvider("https://polygon-rpc.com"))
     account = web3_provider.eth.account(wallet_address)
 
     url = "https://api.polygonscan.com/api/v1/contracts/list?address=" + wallet_address
